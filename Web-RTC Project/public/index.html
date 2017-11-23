@@ -13,16 +13,21 @@
 
   <h1>Realtime communication with WebRTC</h1>
 
-  <video autoplay></video>
+  <video id="localVideo" autoplay></video>
+  <video id="remoteVideo" autoplay></video>
+
+  <div>
+    <button id="startButton">Start</button>
+    <button id="callButton">Call</button>
+    <button id="hangupButton">Hang Up</button>
+  </div>
 
   <button type="button" onclick="clickHandler()">Stop Stream</button>
 
+
+  <script src="js/lib/adapter.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    function clickHandler() {
-      stream.getVideoTracks()[0].stop()
-    }
-  </script>
+  <script> function clickHandler() {stream.getVideoTracks()[0].stop()} </script>
 
 </body>
 
